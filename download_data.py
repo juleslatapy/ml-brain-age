@@ -22,6 +22,8 @@ try:
 except NameError:
     PATH_DATA = "data"
 
+print(PATH_DATA)
+
 os.makedirs(PATH_DATA, exist_ok=True)
 
 def fetch_data(files, dst, base_url, verbose=1):
@@ -40,7 +42,7 @@ def fetch_data(files, dst, base_url, verbose=1):
     """
     downloaded = []
     for file in files:
-        src_filename = os.path.join(base_url, file)
+        src_filename = os.path.join(base_url, file).replace("\\", "/")
         dst_filename = os.path.join(dst, file)
         if not os.path.exists(dst_filename):
             if verbose:
