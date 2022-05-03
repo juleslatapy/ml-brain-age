@@ -10,7 +10,7 @@ import os.path
 import numpy as np
 import pandas as pd
 import urllib.request
-import click
+#import click
 
 from sklearn.model_selection import train_test_split
 from shutil import copyfile, make_archive, unpack_archive, move
@@ -21,8 +21,6 @@ try:
     )
 except NameError:
     PATH_DATA = "data"
-
-print(PATH_DATA)
 
 os.makedirs(PATH_DATA, exist_ok=True)
 
