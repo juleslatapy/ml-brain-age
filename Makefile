@@ -8,3 +8,6 @@ activate_env:
 
 install_dependancies:
 	bash $(SCRIPTS_DIRECTORY)/install.sh ./requirements.txt
+
+create_docker_env:
+	docker build -t brain_age .
