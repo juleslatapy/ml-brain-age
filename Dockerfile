@@ -8,4 +8,5 @@ RUN pip install --no-cache-dir -U pip wheel setuptools
 RUN pip install -r requirements.txt
 COPY /src /src
 WORKDIR /src
-CMD /bin/bash
+#CMD /bin/bash
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]

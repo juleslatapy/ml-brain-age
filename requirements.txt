@@ -6,3 +6,4 @@ nilearn
 matplotlib
 seaborn
 jupyter
+Flask
