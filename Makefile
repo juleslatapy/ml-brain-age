@@ -6,8 +6,11 @@ create_env:
 activate_env:
 	bash $(SCRIPTS_DIRECTORY)/activate.sh
 
-install_dependancies:
+install:
 	bash $(SCRIPTS_DIRECTORY)/install.sh ./requirements.txt
 
 create_docker_env:
 	docker build -t brain_age .
+
+start_app:
+	bash $(SCRIPTS_DIRECTORY)/start_app.sh

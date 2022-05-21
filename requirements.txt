@@ -6,4 +6,4 @@ nilearn
 matplotlib
 seaborn
 jupyter
-Flask
+Flask==2.1.2
