@@ -17,10 +17,10 @@ from shutil import copyfile, make_archive, unpack_archive, move
 
 try:
     PATH_DATA = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), "data"
+        os.path.dirname(os.path.abspath(__file__)), "../data"
     )
 except NameError:
-    PATH_DATA = "data"
+    PATH_DATA = "../data"
 
 os.makedirs(PATH_DATA, exist_ok=True)
 
