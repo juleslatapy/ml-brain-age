@@ -49,17 +49,20 @@ def fetch_data(files, dst, base_url, verbose=1):
         downloaded.append(dst_filename)
     return downloaded
 
-if __name__ == "__main__":
-    fetch_data(files=['train_participants.csv', 'train_rois.csv', 'train_vbm.npz',
-                      'validation_participants.csv', 'validation_rois.csv', 'validation_vbm.npz'],
-               dst=PATH_DATA,
-               base_url='ftp://ftp.cea.fr/pub/unati/people/educhesnay/data/brain_anatomy_ixi/data',
-               verbose=1)
+def download():
+        fetch_data(files=['train_participants.csv', 'train_rois.csv', 'train_vbm.npz',
+                        'validation_participants.csv', 'validation_rois.csv', 'validation_vbm.npz'],
+                dst=PATH_DATA,
+                base_url='ftp://ftp.cea.fr/pub/unati/people/educhesnay/data/brain_anatomy_ixi/data',
+                verbose=1)
 
-    # validation => test
-    move(os.path.join(PATH_DATA, 'validation_participants.csv'),
-         os.path.join(PATH_DATA, 'test_participants.csv'))
-    move(os.path.join(PATH_DATA, 'validation_vbm.npz'),
-         os.path.join(PATH_DATA, 'test_vbm.npz'))
-    move(os.path.join(PATH_DATA, 'validation_rois.csv'),
-         os.path.join(PATH_DATA, 'test_rois.csv'))
+        # validation => test
+        move(os.path.join(PATH_DATA, 'validation_participants.csv'),
+            os.path.join(PATH_DATA, 'test_participants.csv'))
+        move(os.path.join(PATH_DATA, 'validation_vbm.npz'),
+            os.path.join(PATH_DATA, 'test_vbm.npz'))
+        move(os.path.join(PATH_DATA, 'validation_rois.csv'),
+            os.path.join(PATH_DATA, 'test_rois.csv'))
+
+if __name__ == "__main__":
+    download()
