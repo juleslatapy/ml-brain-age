@@ -9,6 +9,12 @@ Such a predictor provides the expected **brain age** of a subject. Deviation fro
 this expected brain age indicates acceleration or slowdown of the aging process
 which may be associated with a pathological neurobiological process or protective factor of aging.
 
+
+## 1 first use
+- create virtual env
+> make create_env
+
+
 ## Dataset
 
 There are 357 samples in the training set and 90 samples in the test set.
